@@ -1,6 +1,12 @@
 # Risk Guard configuration
 # See docs/configuration.md for the full schema.
-
 version: 2
 workflow:
   mode: active
+
+expected_failures:
+  package/npm/express-uncomplicated?version=5.2.2:
+    checks:
+    - PACKAGE_NAME_MISMATCH
+    - PACKAGE_RELEASE_COOLDOWN
+    reason: This is my package and I added the 'package name mismatch' 

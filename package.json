@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Risk-Guard/demo#readme",
   "dependencies": {
+    "express-uncomplicated": "^5.2.2",
     "react": "^19.2.7"
   }
 }

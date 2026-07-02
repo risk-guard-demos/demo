@@ -1,0 +1,6 @@
+# Risk Guard configuration
+# See docs/configuration.md for the full schema.
+
+version: 2
+workflow:
+  mode: active

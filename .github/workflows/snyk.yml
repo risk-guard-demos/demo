@@ -1,14 +1,12 @@
 name: Snyk
 
 on:
-  pull_request:
   push:
-    branches: [main]
 
 permissions:
   contents: read
-  actions: read            # let upload-sarif read workflow-run info for fingerprinting
-  security-events: write   # upload SARIF to the Security tab
+  actions: read # let upload-sarif read workflow-run info for fingerprinting
+  security-events: write # upload SARIF to the Security tab
 
 jobs:
   snyk:
@@ -19,7 +17,7 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         id: snyk
         uses: snyk/actions/node@master
-        continue-on-error: true   # don't fail yet — upload SARIF first, then gate below
+        continue-on-error: true # don't fail yet — upload SARIF first, then gate below
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:

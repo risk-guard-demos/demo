@@ -1,14 +1,12 @@
 name: Risk Guard
 
 on:
-  pull_request:
   push:
-    branches: [main]
 
 permissions:
   contents: read
-  actions: read            # let upload-sarif read workflow-run info for fingerprinting
-  security-events: write   # upload SARIF to the Security tab
+  actions: read # let upload-sarif read workflow-run info for fingerprinting
+  security-events: write # upload SARIF to the Security tab
 
 jobs:
   risk-guard:
